@@ -1,0 +1,8 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/search")
+async def search(q: str):
+    # ... your search logic using the query parameter "q" ...
+    return {"results": ["item1", "item2"]}
